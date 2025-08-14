@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int main(){
+    cout<<'\t'<<"Largest of three numbers"<<endl<<endl;
+    int x,y,z;
+    cout<<"Enter the three numbers: ";
+    cin>>x>>y>>z;
+    
+    if(x<y&&x<z){//x smallest
+        if(y<z){
+            cout<<"Largest= "<<z;
+        }
+        else{
+            cout<<"Largest= "<<y;
+        }
+    }
+    else if(y<x&&y<z){//y smallest
+        if(x<z){
+            cout<<"Largest= "<<z;
+        }
+        else{
+            cout<<"Largest= "<<x;
+        }
+    }
+    else{//z smallest
+        if(x<y){
+            cout<<"Largest= "<<y;
+        }
+        else{
+            cout<<"Largest= "<<x;
+        }
+    }
+    return 0;
+}
