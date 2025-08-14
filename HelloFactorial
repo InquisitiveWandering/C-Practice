@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    cout<<"Hello!"<<endl<<endl;
+    
+    unsigned int n;
+    unsigned long long factorial=1;
+    cout<<"Enter n for n! computation: ";
+    cin>>n;
+    
+    for(int i=1; i<=n; i++){
+        factorial=factorial*i;
+    }
+    
+    cout<<endl<<n<<"! = "<<factorial;
+    return 0;
+}
