@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main(){
+    cout<<"\tFibonacci Series generator up to nth term"<<endl<<endl;
+    unsigned int n, a,b;
+    cout<<"Enter the first two terms: ";
+    cin>>a>>b;
+    cout<<"Enter the number of terms: ";
+    cin>>n;
+    
+    if(n==1){
+        cout<<a;
+    }
+    else if(n==2){
+        cout<<a<<'\t'<<b;
+    }
+    else{
+        cout<<a<<'\t'<<b;
+        for(unsigned int i=3; i<=n; i++){
+            cout<<'\t'<<a+b;
+            unsigned int t=a+b;
+            a=b;
+            b=t;
+        }
+    }
+    return 0;
+}
