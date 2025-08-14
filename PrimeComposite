@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main(){
+    cout<<'\t'<<"Prime number checker"<<endl<<endl;
+    unsigned int check,i;
+    cout<<"Enter the number to be checked: ";
+    cin>>check;
+    
+    if(check==0||check==1){
+        cout<<check<<" is neither prime nor composite.";
+    }
+    else if(check==2){
+        cout<<check<<" is a prime number.";
+    }
+    else{
+        for(unsigned int i=2; i<check; i++){
+            if(check%i==0){
+                cout<<check<<" is a composite number.";
+                return 0;
+            }
+        }
+        cout<<check<<" is a prime number.";
+    }
+    return 0;
+}
