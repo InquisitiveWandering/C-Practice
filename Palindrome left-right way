@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    cout << '\t' << "Palindrome check" << endl << endl;
+    int x;
+    cout << "Enter the number: ";
+    cin >> x;
+
+    // Single-digit numbers are always palindromes
+    if ((x >= 0) && (x <= 9)) {
+        cout << endl << "Palindrome";
+        return 0;
+    }
+
+    // Count number of digits in x
+    int y = x, count = 0;
+    while (y != 0) {
+        y = (y / 10);
+        count++;
+    }
+
+    // Compare digits from left and right
+    for (int i = 1; i <= (count / 2); i++) {
+        // Get ith digit from left
+        int left = ( (x / (int)(pow(10, (count - i)))) % 10 );
+
+        // Get ith digit from right
+        int right = ( (x / (int)(pow(10, (i - 1)))) % 10 );
+
+        // If mismatch, not a palindrome
+        if (left != right) {
+            cout << endl << "Not Palindrome";
+            return 0;
+        }
+    }
+
+    // If all pairs matched
+    cout << endl << "Palindrome";
+    return 0;
+}
