@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int choice2;
+void temConvert(){
+	cout<<"1. C to F\t 2. F to C\n";
+				cout<<"What conversion will you do?\n";
+				cin>>choice2;
+				float tem1, tem2;
+				cout<<"Enter the magnitude: ";
+				cin>>tem1;
+				if(choice2==1){
+					tem2= tem1*(9/5)+ 32;
+					cout<< (double)tem1 <<" degrees celsius= "<<(double)tem2<<" degrees fahrenheit\n"; 
+				}
+				else{
+					tem2= (-32+tem1)*(5/9);
+					cout<<(double)tem1<<" degrees fahrenheit= "<<(double)tem2<<" degrees celsius\n"; 
+				}	
+}
+
+void ConvertUSD(){
+	float newcur;
+	cout<<"Enter the value in USD: ";
+	cin>>choice2;
+	newcur = 87.35 * choice2;
+	cout<<(double)choice2<<" USD = "<<(double)newcur<<" INR"<<endl;
+	newcur = 0.86 * choice2;
+	cout<<(double)choice2<<" USD = "<<(double)newcur<<" EUR"<<endl;
+	
+}
+int main(){
+	
+	cout<<"Conversion operations: "<<endl;
+	cout<<"A. Celsius and Fahrenheit \t B. USD to INR AND EUR\t C. Exit"<<endl;
+	char choice;
+	
+	while(1){
+		cout<<"Enter your choice: ";
+		cin>>choice;
+		
+		switch(choice){
+			case 'A':
+				temConvert();
+				break;
+			
+			case 'B':
+				ConvertUSD();
+				break;
+				
+			case 'C':
+				cout<<"Successfully terminated program.";
+				return 0;
+		}
+	}
+	return 0;
+}
